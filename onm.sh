@@ -1,9 +1,9 @@
-#!/usr/bin/env bash
+#!/bin/bash
 echo
 # Obfuscated URL is entered here.
 read -p  "Please paste URL here: " input
 #New variable created called $domain, URL is converted taking the XX/xx from http/https, and reaplacing it with http. Then [dot] is converted to . and brackets are removed.
-domain=$(echo $input | sed 's/[xX]/t/g'|sed 's/dot/./g'|sed 's/[][]//g')
+domain=$(echo $input | sed 's/[xX]/t/'|sed 's/[xX]/t/'|sed 's/dot/./g'|sed 's/[][]//g')
 echo
 printf "\e[1m%s\e[0m%s\n"  "Here is your converted URL: "
 echo  $domain
